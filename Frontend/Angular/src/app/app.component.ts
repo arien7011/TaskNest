@@ -11,14 +11,14 @@ export class AppComponent implements OnInit {
   todoList = []; 
 
     ngOnInit(): void {
-      this.getTodoList();
+       this.getTodoList();
     }
 
    async getTodoList(){
-    const url = `/api/v1/todo/todoList`
-     const res = await fetch(url);
-     const result = await res.json();
-     this.todoList = result;
-     console.log({toodolist:this.todoList});
-    }
+  //   const url = `/api/v1/todo/todoList`
+  //    const res = await fetch(url);
+  //    const result = await res.json();
+  //    this.todoList = result;
+  //    console.log({toodolist:this.todoList});
+   }
 }

@@ -20,11 +20,11 @@ app.use(express.urlencoded({extended:true,limit:"16kb"}))
 app.use(cookieParser())
 
 
-// app.use('/api/v1/users',(req,res)=>{
-//     console.log({requestttt:req.body});
-//     res.send('Welcome to the Backend API! Please refer to the documentation for usage instructions.'
-//     )
-// });
+app.use('/',(req,res)=>{
+    console.log({req:req})
+    res.send(`<h1>Welcome to the Backend API! Please refer to the documentation for usage instructions.</h1>`
+    )
+});
 
 //Routes import
 import {userRouter} from './src/routes/user.routes.js';
